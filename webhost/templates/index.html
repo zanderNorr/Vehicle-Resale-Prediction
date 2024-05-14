@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Model Prediction</title>
+</head>
+<body>
+    <h1>Ridge Regression Model Interaction</h1>
+    <form method="post" action="/predict">
+        <input type="text" name="make" placeholder="make">
+        <input type="text" name="body" placeholder="body">
+        <input type="number" name="odometer" placeholder="odometer">
+        <input type="number" name="year" placeholder="year">
+        <input type="number" name="condition" placeholder="condition (0-50)">
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
